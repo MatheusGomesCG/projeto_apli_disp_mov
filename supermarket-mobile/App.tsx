@@ -13,9 +13,9 @@ const App: React.FC = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen options={{ headerShown: false }} name="login" component={Login} />
-        <Stack.Screen options={{ title: 'Cancelar', headerTintColor: '#000' }} name="createAccount" component={CreateAccount} />
-        <Stack.Screen options={{ title: 'Cancelar', headerTintColor: '#000' }} name="forgotPassword" component={ForgotPassword} />
-        <Stack.Screen options={{ headerShown: false }} name="home" component={Home} />
+        <Stack.Screen options={{ title: 'Criar Usuário', headerTintColor: '#000' }} name="createAccount" component={CreateAccount} />
+        <Stack.Screen options={{ title: 'Recuperar Senha', headerTintColor: '#000' }} name="forgotPassword" component={ForgotPassword} />
+        <Stack.Screen options={{ title: 'Ofertas', headerBackVisible: false , headerTitleAlign: "center"}} name="home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );

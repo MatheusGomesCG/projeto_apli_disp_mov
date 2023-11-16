@@ -3,12 +3,12 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import styles from './LoginStyle'
 import Icon from 'react-native-vector-icons/AntDesign';
+import home from '../home/Home';
 
-const Login = ({navigation}) => {
-  const onPress = () => {
-    console.log("Login");
-  };
-
+const Login = ({navigation}: any) => {
+  const goToPage = (path: String) => {
+    navigation.navigate(path)
+  }
   return (
     <View style={styles.container}>
       <View style={styles.logo}>
@@ -20,13 +20,14 @@ const Login = ({navigation}) => {
       <Text>Password</Text>
       <TextInput secureTextEntry={true} style={styles.input} />
       <View style={styles.createForgotLink}>
-        <Text onPress={() => {navigation.navigate("createAccount")}} style={styles.link}>Create Account</Text>
-        <Text onPress={() => {navigation.navigate("forgotPassword")}} style={styles.link}>Forgot Password</Text>
+        <Text onPress={() => {goToPage("createAccount")}} style={styles.link}>Create Account</Text>
+        <Text onPress={() => {goToPage("forgotPassword")}} style={styles.link}>Forgot Password</Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onPress}>
+      <TouchableOpacity style={styles.button} onPress={() => {goToPage("home")}}>
         <Text style={styles.buttonText}>Enviar</Text>
       </TouchableOpacity>
     </View>
+
   );
 };
 
