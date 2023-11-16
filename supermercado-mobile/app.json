@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "supermarket-mobile",
-    "slug": "supermarket-mobile",
+    "name": "supermercado-mobile",
+    "slug": "supermercado-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
